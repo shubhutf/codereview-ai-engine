@@ -3,4 +3,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-llm = ChatOpenAI(model="gpt-4o-mini",api_key=os.getenv("OPEN_API_KEY"))
+llm = ChatOpenAI(
+    model="openai/gpt-oss-120b",
+    api_key=os.getenv("GROQ_API_KEY"),
+    base_url="https://api.groq.com/openai/v1"
+)
